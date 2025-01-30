@@ -1,0 +1,4 @@
+inspect-ai
+notebook
+ipywidgets
+openai
