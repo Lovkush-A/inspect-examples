@@ -1,6 +1,6 @@
 # Inspect examples
 
-This repo contains simple self-contained examples of how to use the `inspect` package.
+This repo contains simple self-contained examples of how to use UK AISI's `inspect` package.
 
 ## Installation and setup
 
@@ -30,7 +30,11 @@ OPENAI_API_KEY=<your_openai_api_key>
 
 - Install and open Docker Desktop
 
+
+
 ## How to run an example
+
+Remember to activate the virtual environment and open Docker Desktop before running the examples.
 
 - Run the example, e.g. for `example1.py`:
 
