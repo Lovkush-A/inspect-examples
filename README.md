@@ -51,7 +51,7 @@ inspect view
 ## Explanation of the examples
 
 - `example1.py`: Example of question answering, with chain of thought. No agents.
-- `example2.py`: Example of agent with tool use, where agent has access to bash and python to help with the task. Still question answering.
+- `example2.py`: Example of agent with tool use (bash and python) to help with the task. Still question answering.
 - `example3.py`: Example of agent with tool use and access to files. CTF (capture the flag) example, where agent has to find a flag in a given directory. Simplified version of [the example](https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/src/inspect_evals/gdm_capabilities/intercode_ctf) that Inspect points to in [their documentation](https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/src/inspect_evals/gdm_capabilities/intercode_ctf).
 - `example4.py`: Example of agent with tool use and access to files. Simpler than example3 as task is much simpler.
-- `example5.py`: Same as example3, but with specified Dockerfile instead of default.
+- `example5.py`: Same as example3, but with specified Dockerfile instead of default. Based on templates from [Inspect](https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/src/inspect_evals/gdm_capabilities/intercode_ctf), but used `python:3.12-bookworm` instead of `ubuntu:latest`. `ubuntu:latest` causing fetching errors.
