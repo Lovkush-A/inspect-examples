@@ -17,7 +17,6 @@ def read_dataset(
     shuffle: bool = False,
     sample_ids: list[int] | None = None,
 ) -> Dataset:
-    # ensure the data is downloaded
     DATA_DIR = (
         Path(__file__).parent / "ctf"
     )
