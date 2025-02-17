@@ -19,10 +19,13 @@ def read_dataset() -> Dataset:
 
         task_id_files = [
             os.path.relpath(file, DATA_DIR)
-            for file in glob(f"{task_id_folder}/*")
+            for file in glob(f"{task_id_folder}/**/*", recursive=True)
             if os.path.isfile(file)
         ]
-        files = {os.path.basename(file): file for file in task_id_files}
+        files = {
+            file.split(f"task_assets/{str(task_id)}/")[1]: file
+            for file in task_id_files
+        }
 
         # Format prompt
         input = dedent("""
