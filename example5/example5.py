@@ -30,7 +30,10 @@ def read_dataset(
             for file in glob(f"{task_id_folder}/*")
             if os.path.isfile(file)
         ]
-        files = {os.path.basename(file): file for file in task_files}
+        files = {
+            file.split(f"task_assets/{str(task_id)}/")[1]: file
+            for file in task_files
+        }
 
         # read solution
         with open(f"{task_id_folder}/solution/README.md") as f:
