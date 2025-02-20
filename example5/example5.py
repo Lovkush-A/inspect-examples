@@ -71,7 +71,10 @@ dataset = read_dataset()
 
 
 DEFAULT_APT_GET_INSTALLS = [
-    "wget"
+    "wget",
+    "bash",
+    "python3",
+    "python3-pip",
 ]
 
 DEFAULT_PIP3_INSTALLS = [
@@ -97,7 +100,7 @@ def generate_dockerfile(apt_get_installs: list[str], pip3_installs: list[str]) -
 
 @task
 def ctf_agent():
-    # generate_dockerfile(DEFAULT_APT_GET_INSTALLS, DEFAULT_PIP3_INSTALLS)
+    generate_dockerfile(DEFAULT_APT_GET_INSTALLS, DEFAULT_PIP3_INSTALLS)
 
     COMPOSE_FILE = Path(__file__).parent / "compose.yaml"
 
